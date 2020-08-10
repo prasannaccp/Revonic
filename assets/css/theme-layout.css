@@ -1,0 +1,80 @@
+@media screen and (min-width: 320px) {
+    .card {
+        display: flex;
+        flex-direction: initial;
+        width: 100%;
+    }
+    .card_image img {
+        width: 120px;
+        border-radius: 5px;
+    }
+    .card_content {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .cards_item {
+        width: 100%;
+    }
+    #myInput {
+        width: 100%;
+    }
+    .card_content{
+        padding: 0rem 1rem;
+    }
+     .cards_item {
+        padding: 0.4rem 1rem;
+    }
+
+     li.cards_item:first-child {
+        padding-top:1rem;
+    }
+    li.cards_item:last-child {
+        padding-bottom:1rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .cards_item {
+        width: 50%;
+    }
+    .card{
+        box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+        border-radius: 5px 5px 0 0;
+    }
+   
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+    .card_image img {
+        width: 100%;
+        border-radius: 0;
+        height: 230px;
+        object-fit: cover;
+    }
+    .cards_item {
+        width: 33.3333%;
+    }
+    #myInput {
+        width: 256px;
+    }
+     .card_content{
+        padding: 1rem;
+    }
+     .cards_item {
+        padding:1rem;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .display-flex-mob {
+        display: block;
+    }
+    .cards_item {
+        width: 25%;
+    }
+}

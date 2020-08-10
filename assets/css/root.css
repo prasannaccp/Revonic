@@ -1,0 +1,508 @@
+
+@import "colors.css";
+body {
+    margin: 0;
+    background: var(--white);
+    color: var(--light-black);
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.mt-none {
+    margin-top: 0;
+}
+
+.p-lg {
+    padding: 20px;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.show-cart li {
+    display: flex;
+}
+
+.card {
+    margin-bottom: 0px;
+}
+
+.star-rating {
+    font-size: 1.2em;
+    padding: 0 0.2em;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    color: var(--gray-ccc);
+    cursor: pointer;
+}
+
+.star-rating :checked~label {
+    color: var(--yellow);
+}
+
+.vendor-title {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.vendor-sub-title {
+    font-size: 0.875rem;
+    color: var(--gray);
+}
+
+.number-rating {
+    font-size: 0.875rem;
+    font-weight: 600;
+    background: var(--yellow);
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.mb-lg {
+    margin-top: 20px;
+}
+
+.field {
+    display: none;
+}
+
+.add,
+.sub {
+    background: var(--yellow-light);
+    border: none;
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.sub {
+    margin-right: -4px;
+}
+
+.add {
+    margin-left: -4px;
+}
+
+.add-to-cart {
+    background: var(--yellow-light);
+    border: none;
+    padding: 2px 20px;
+    font-weight: 666;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.number-disp {
+    font-size: 12px;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    border: 1px solid var(--gray-light);
+    text-align: center;
+    line-height: 20px;
+    background: var(--gray-light);
+    font-weight: 600;
+}
+
+.price {
+    margin-top: 0;
+    font-size: 16px;
+    color: var(--gray-darker);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.red-dot {
+    border: 1px solid var(--red);
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    line-height: 0px;
+    padding: 1px;
+    vertical-align: middle;
+}
+
+.red-dot:before {
+    content: "";
+    background: var(--red);
+    border: 1px solid var(--red);
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: bottom;
+}
+
+.dot-text {
+    color: var(--gray-lighter);
+    font-size: 10px;
+    margin-left: 2px;
+}
+
+.card-title {
+    font-size: 16px;
+    color: var(--gray-darker);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.p-size {
+    font-size: 11px;
+    color: var(--gray-dark);
+    font-weight: 600;
+}
+
+.p-size span:first-child {
+    color: var(--red);
+    margin-right: 5px;
+}
+
+.checkout-conatiner {
+    width: 296px;
+    padding: 12px;
+    background: linear-gradient(var(--red-lighter), var(--red-light));
+    border: none;
+    border-radius: 4px;
+    color: var(--white);
+    font-size: 16px;
+    margin: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+    visibility: hidden;
+    font-weight: 600;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+.checkout-link {
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.checkout-text {
+    background: transparent;
+    border: none;
+}
+
+.filterDiv {
+    display: none;
+    padding-top: 0;
+}
+
+.show {
+    display: block;
+}
+
+#filter-control,
+#myInput {
+    display: none;
+}
+
+#myInput {
+    border: 1px solid var(--gray-lighter);
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card_image img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--gray-lighter);
+    border-bottom: 1px solid var(--gray-lighter);
+    margin-bottom: 95px;
+    overflow:hidden;
+}
+
+ .cards_item {
+        display: flex;
+    }
+
+.card {
+    background-color: var(--white);
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card_content {
+    padding: 1rem;
+}
+
+.card_title {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+}
+
+.card_text {
+    color: var(--white);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+}
+
+.made_by {
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.filterDiv {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#filter-control .btn {
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    background: var(--white);
+    color: var(--gray-darkest);
+    cursor: pointer;
+    border: 1px solid var(--gray-lighter);
+    border-radius: 30px;
+}
+
+#filter-control .btn:hover {
+    border: 1px solid var(--red);
+}
+
+#filter-control .btn.active {
+    border: 1px solid var(--red);
+    color: var(--gray-darkest);
+}
+
+#filter img,
+#search img {
+    width: 16px;
+}
+
+.categories {
+    padding: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.categories .btn {
+    background: var(--white);
+    border: none;
+    font-size: 14px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    color: var(--gray-dark);
+    cursor: pointer;
+}
+
+.btn {
+    outline: none;
+}
+
+.categories .btn.active {
+    color: var(--red);
+}
+
+ul.filter-search {
+    padding-left: 0;
+    list-style: none;
+}
+
+ul.filter-search li {
+    display: inline-block;
+    text-align: center;
+    padding: 0 8px;
+    font-weight: 600;
+    color: var(--gray-lighter);
+    font-size: 14px;
+    cursor: pointer;
+}
+ul.filter-search li:last-child{
+    padding-right:0;
+}
+.filter-search-text.active {
+    color: var(--red);
+}
+
+#myInput.filter-control-spac,
+#filter-control.filter-control-spac {
+    margin: 15px;
+    margin-top: 0;
+}
+
+.filter-cat-results .f-cat {
+  opacity: 0;
+  display: none;
+}
+.filter-cat-results .f-cat.show.active {
+  opacity: 1;
+  display: block;
+  -webkit-animation: fadeIn 0.65s ease forwards;
+  animation: fadeIn 0.65s ease forwards;
+}
+
+hr {
+    clear: both;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 0;
+    border-top: 1px solid var(--gary-aaa);
+}
+
+.btn-close {
+    color: var(--gary-aaa);
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+
+.modal:before {
+    content: "";
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.modal:target:before {
+    display: block;
+}
+
+.modal:target .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    top: 20%;
+}
+
+.modal-dialog {
+    background: #fefefe;
+    border-radius: 5px;
+    margin-left: -200px;
+    position: fixed;
+    left: 50%;
+    top: -100%;
+    z-index: 11;
+    width: 360px;
+    transition: transform 0.3s ease-out;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-header,
+.modal-footer {
+    padding: 10px 20px;
+}
+
+.modal-header {
+    border-bottom: var(--gray-dark) solid 1px;
+}
+
+.modal-header .modal__title {
+    font-size: 20px;
+}
+
+.modal-footer {
+    border-top: var(--gray-dark) solid 1px;
+    text-align: right;
+}
+
+.bg-img1{
+    background: url(https://i2.wp.com/allourway.com/wp-content/uploads/2014/04/Perfect-Pizza-crust_600.jpg);
+}
+
+.bg-img2{
+    background: url(https://www.tasteofhome.com/wp-content/uploads/2018/01/Chicken-Pizza_exps30800_FM143298B03_11_8bC_RMS.jpg);
+}
+
+.bg-img3{
+    background: url(https://content3.jdmagicbox.com/comp/noida/r4/011pxx11.xx11.180830082714.n9r4/catalogue/domino-s-pizza--sector-31-noida-pizza-outlets-3x5ntwfuns.jpg);
+    display: block;
+    
+}
+.bg-img1,
+.bg-img2,
+.bg-img3{
+    width: 100%;
+    height: 230px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    transition: all .5s ease;
+}
+.bg-img1:hover,
+.bg-img2:hover,
+.bg-img3:hover{
+    transform: scale(1.1);
+}
