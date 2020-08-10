@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Revonic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/root.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/theme-layout.css" />
+</head>
+
+<body>
+    <section>
+        <div class="main">
+            <div class="display-flex justify-content-space-between p-lg">
+                <div>
+                    <div class="vendor-title">Mr.Bolat</div>
+                    <div class="vendor-sub-title">Al Oasis Mall, Deira</div>
+                    <div class="vendor-rating">
+                        <span class="number-rating">4.0</span>
+                        <span class="star-rating">
+                            <input type="radio" id="4-stars" name="rating" value="4" checked disabled
+                            />
+                            <label for="4-stars" class="star">&#9733;</label>
+                            <input type="radio" id="3-stars" name="rating" value="3" disabled
+                            />
+                            <label for="3-stars" class="star">&#9733;</label>
+                            <input type="radio" id="2-stars" name="rating" value="2" disabled
+                            />
+                            <label for="2-stars" class="star">&#9733;</label>
+                            <input type="radio" id="1-star" name="rating" value="1" disabled
+                            />
+                            <label for="1-star" class="star">&#9733;</label>
+                        </span>
+                    </div>
+                </div>
+                <ul class="filter-search">
+                    <li id="filter">
+                        <div><img src="assets/images/filter.svg" /></div>
+                        <div class="filter-search-text">Filter</div>
+                    </li>
+                    <li id="search">
+                        <div><img src="assets/images/search.svg" /></div>
+                        <div class="filter-search-text">Seacrh</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter-conatiner">
+                <input id="myInput" type="text" placeholder="Search Here" />
+
+                <div id="filter-control">
+                    <button class="btn active" onclick="filterSelection('top')">Top Rated</button>
+                    <button class="btn" onclick="filterSelection('low-in-cal')">Low Calories</button>
+                    <button class="btn" onclick="filterSelection('hot')">Hot</button>
+                    <button class="btn" onclick="filterSelection('spicy')">spicy</button>
+                </div>
+                <div class="filtering">
+                    <div class="filter-cat categories">
+                        <button class="btn active" data-value="cat-best-seller">Best seller</button>
+                        <button class="btn" data-value="cat-pizza">Pizza</button>
+                        <button class="btn" data-value="cat-steaks">Steaks</button>
+                        <button class="btn" data-value="cat-kebabs">Kebabs</button>
+                    </div>
+                </div>
+            </div>
+          
+            <ul id="cards" class="cards filter-cat-results">
+                <li class="cards_item filterDiv top f-cat" data-cat="cat-best-seller">
+                    <div class="card align-items-center">
+                        <div class="card_image">
+                            <img src="https://i2.wp.com/allourway.com/wp-content/uploads/2014/04/Perfect-Pizza-crust_600.jpg" alt="Margerita" />
+                        </div>
+                        <div class="card_content">
+                            <div class="card-block">
+                                <div class="card-title">Margerita</div>
+                                <div class="p-size">
+                                    <span>PIZZA</span>
+                                    <span>LARGE</span>
+                                </div>
+                                <div>
+                                    <i class="red-dot" aria-hidden="true"></i>
+                                    <span class="dot-text">Special</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="card-text price">$16.00</p>
+                                <a data-name="Margerita" data-price="16.00" class="add-to-cart btn btn-primary">ADD</a>
+                                <div class="field">
+                                    <input type="button" class="minus-item sub" value="-" />
+                                    <span class="number-disp">1</span>
+                                    <input type="button" class="plus-item add" value="+" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="cards_item top filterDiv hot spicy f-cat" data-cat="cat-best-seller">
+                    <div class="card align-items-center">
+                        <div class="card_image">
+                            <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Chicken-Pizza_exps30800_FM143298B03_11_8bC_RMS.jpg" alt="Marinar Crudo" />
+                        </div>
+                        <div class="card_content">
+                            <div class="card-block">
+                                <div class="card-title">Marinar Crudo</div>
+                                <div class="p-size">
+                                    <span>PIZZA</span>
+                                    <span>LARGE</span>
+                                </div>
+                                <div>
+                                    <i class="red-dot" aria-hidden="true"></i>
+                                    <span class="dot-text">Special</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="card-text price">$12.50</p>
+
+                                <a data-name="Marinar" data-price="12.50" class="add-to-cart btn btn-primary">ADD</a>
+                                <div class="field">
+                                    <input type="button" class="minus-item sub" value="-" />
+                                    <span class="number-disp">1</span>
+                                    <input type="button" class="plus-item add" value="+" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="cards_item top filterDiv low-in-cal spicy f-cat" data-cat="cat-best-seller">
+                    <div class="card align-items-center">
+                        <div class="card_image">
+                            <img src="https://content3.jdmagicbox.com/comp/noida/r4/011pxx11.xx11.180830082714.n9r4/catalogue/domino-s-pizza--sector-31-noida-pizza-outlets-3x5ntwfuns.jpg" alt="Quattro Stagiyoni" />
+                        </div>
+                        <div class="card_content">
+                            <div class="card-block">
+                                <div class="card-title">Quattro Stagiyoni</div>
+                                <div class="p-size">
+                                    <span>PIZZA</span>
+                                    <span>LARGE</span>
+                                </div>
+                                <div>
+                                    <i class="red-dot" aria-hidden="true"></i>
+                                    <span class="dot-text">Special</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="card-text price">$10.25</p>
+                                <a data-name="Quattro" data-price="10.25" class="add-to-cart btn btn-primary">ADD</a>
+                                <div class="field">
+                                    <input type="button" class="minus-item sub" value="-" />
+                                    <span class="number-disp">1</span>
+                                    <input type="button" class="plus-item add" value="+" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="cards_item filterDiv top  f-cat" data-cat="cat-pizza">
+                    <div class="card align-items-center">
+                        <div class="card_image">
+                            <img src="https://i2.wp.com/allourway.com/wp-content/uploads/2014/04/Perfect-Pizza-crust_600.jpg" alt="Margerita" />
+                        </div>
+                        <div class="card_content">
+                            <div class="card-block">
+                                <div class="card-title">Margerita1</div>
+                                <div class="p-size">
+                                    <span>PIZZA</span>
+                                    <span>LARGE</span>
+                                </div>
+                                <div>
+                                    <i class="red-dot" aria-hidden="true"></i>
+                                    <span class="dot-text">Special</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="card-text price">$16.00</p>
+                                <a data-name="Margerita1" data-price="16.00" class="add-to-cart btn btn-primary">ADD</a>
+                                <div class="field">
+                                    <input type="button" class="minus-item sub" value="-" />
+                                    <span class="number-disp">1</span>
+                                    <input type="button" class="plus-item add" value="+" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="cards_item top filterDiv hot spicy f-cat" data-cat="cat-steaks">
+                    <div class="card align-items-center">
+                        <div class="card_image">
+                            <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Chicken-Pizza_exps30800_FM143298B03_11_8bC_RMS.jpg" alt="Marinar Crudo" />
+                        </div>
+                        <div class="card_content">
+                            <div class="card-block">
+                                <div class="card-title">Marinar Crudo1</div>
+                                <div class="p-size">
+                                    <span>PIZZA</span>
+                                    <span>LARGE</span>
+                                </div>
+                                <div>
+                                    <i class="red-dot" aria-hidden="true"></i>
+                                    <span class="dot-text">Special</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="card-text price">$12.50</p>
+
+                                <a data-name="Marinar1" data-price="12.50" class="add-to-cart btn btn-primary">ADD</a>
+                                <div class="field">
+                                    <input type="button" class="minus-item sub" value="-" />
+                                    <span class="number-disp">1</span>
+                                    <input type="button" class="plus-item add" value="+" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="cards_item top filterDiv low-in-cal spicy f-cat" data-cat="cat-kebabs">
+                    <div class="card align-items-center">
+                        <div class="card_image">
+                            <img src="https://content3.jdmagicbox.com/comp/noida/r4/011pxx11.xx11.180830082714.n9r4/catalogue/domino-s-pizza--sector-31-noida-pizza-outlets-3x5ntwfuns.jpg" alt="Quattro Stagiyoni" />
+                        </div>
+                        <div class="card_content">
+                            <div class="card-block">
+                                <div class="card-title">Quattro Stagiyoni1</div>
+                                <div class="p-size">
+                                    <span>PIZZA</span>
+                                    <span>LARGE</span>
+                                </div>
+                                <div>
+                                    <i class="red-dot" aria-hidden="true"></i>
+                                    <span class="dot-text">Special</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="card-text price">$10.25</p>
+                                <a data-name="Quattro1" data-price="10.25" class="add-to-cart btn btn-primary">ADD</a>
+                                <div class="field">
+                                    <input type="button" class="minus-item sub" value="-" />
+                                    <span class="number-disp">1</span>
+                                    <input type="button" class="plus-item add" value="+" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="checkout-conatiner">
+             <a href="#modal-one" class="checkout-link display-flex justify-content-space-between">
+                <div class="text-left">
+                        <span >Swipe to checkout</span>
+                </div>
+                <div class="text-right">
+                    $<span class="checkout-text total-cart"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    
+
+    <!-- Modal -->
+    <div class="modal" id="modal-one" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Cart</h3>
+                <a href="#" class="btn-close" aria-hidden="true">×</a>
+            </div>
+            <div class="modal-body">
+                <h4 class="mt-none">Mr.Bolat</h4>
+                <table class="show-cart table"></table>
+                <div>Total price: $<span class="total-cart"></span></div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal -->
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/cart.js"></script>
+
+</body>
+
+</html>
