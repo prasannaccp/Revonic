@@ -421,88 +421,34 @@ hr {
     top: 0;
 }
 
-.modal:before {
-    content: "";
-    display: none;
-    background: rgba(0, 0, 0, 0.6);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888; 
 }
 
-.modal:target:before {
-    display: block;
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.modal:target .modal-dialog {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
-    top: 20%;
-}
-
-.modal-dialog {
-    background: #fefefe;
-    border-radius: 5px;
-    margin-left: -200px;
-    position: fixed;
-    left: 50%;
-    top: -100%;
-    z-index: 11;
-    width: 360px;
-    transition: transform 0.3s ease-out;
-}
-
-.modal-body {
-    padding: 20px;
-}
-
-.modal-header,
-.modal-footer {
-    padding: 10px 20px;
-}
-
-.modal-header {
-    border-bottom: var(--gray-dark) solid 1px;
-}
-
-.modal-header .modal__title {
-    font-size: 20px;
-}
-
-.modal-footer {
-    border-top: var(--gray-dark) solid 1px;
-    text-align: right;
-}
-
-.bg-img1{
-    background: url(https://i2.wp.com/allourway.com/wp-content/uploads/2014/04/Perfect-Pizza-crust_600.jpg);
-}
-
-.bg-img2{
-    background: url(https://www.tasteofhome.com/wp-content/uploads/2018/01/Chicken-Pizza_exps30800_FM143298B03_11_8bC_RMS.jpg);
-}
-
-.bg-img3{
-    background: url(https://content3.jdmagicbox.com/comp/noida/r4/011pxx11.xx11.180830082714.n9r4/catalogue/domino-s-pizza--sector-31-noida-pizza-outlets-3x5ntwfuns.jpg);
-    display: block;
-    
-}
-.bg-img1,
-.bg-img2,
-.bg-img3{
-    width: 100%;
-    height: 230px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center;
-    transition: all .5s ease;
-}
-.bg-img1:hover,
-.bg-img2:hover,
-.bg-img3:hover{
-    transform: scale(1.1);
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
