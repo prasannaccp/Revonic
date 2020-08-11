@@ -78,7 +78,7 @@
                                 <div class="card-title">Margerita</div>
                                 <div class="p-size">
                                     <span>PIZZA</span>
-                                    <span>LARGE</span>
+                                    <span>LARGE1</span>
                                 </div>
                                 <div>
                                     <i class="red-dot" aria-hidden="true"></i>
@@ -234,11 +234,11 @@
                             </div>
                             <div>
                                 <p class="card-text price">$10.25</p>
-                                <a data-name="Quattro1" data-price="10.25" class="add-to-cart btn btn-primary">ADD</a>
+                                <a  class="add-to-cart btn btn-primary">ADD</a>
                                 <div class="field">
-                                    <input type="button" class="minus-item sub" value="-" />
+                                    <input type="button" class="minus-item sub" value="-" data-name="Quattro1" data-price="10.25"/>
                                     <span class="number-disp">1</span>
-                                    <input type="button" class="plus-item add" value="+" />
+                                    <input type="button" class="plus-item add" value="+" data-name="Quattro1" data-price="10.25"/>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +247,7 @@
             </ul>
         </div>
         <div class="checkout-conatiner">
-             <a href="#modal-one" class="checkout-link display-flex justify-content-space-between">
+             <a href="#" id="modal-one" class="checkout-link display-flex justify-content-space-between">
                 <div class="text-left">
                         <span >Swipe to checkout</span>
                 </div>
@@ -258,24 +258,19 @@
         </div>
     </section>
 
-    
-
-    <!-- Modal -->
-    <div class="modal" id="modal-one" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-header">
-                <h3>Cart</h3>
-                <a href="#" class="btn-close" aria-hidden="true">×</a>
-            </div>
-            <div class="modal-body">
-                <h4 class="mt-none">Mr.Bolat</h4>
-                <table class="show-cart table"></table>
-                <div>Total price: $<span class="total-cart"></span></div>
-            </div>
-        </div>
+    <!-- The Modal -->
+    <div id="cartModal" class="modal">
+          <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Order Summary</h3>
+                <div class="modal-body">
+                    <h4 class="mt-none">Mr.Bolat</h4>
+                    <table class="show-cart table"></table>
+                    <div>Total price: $<span class="total-cart"></span></div>
+                </div>
+          </div>
     </div>
-    <!-- /Modal -->
-</div>
+    <!-- The Modal -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/cart.js"></script>
 
