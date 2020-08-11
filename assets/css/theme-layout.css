@@ -32,6 +32,9 @@
     li.cards_item:last-child {
         padding-bottom:1rem;
     }
+    .modal-content{
+        width:90%;
+    }
 }
 
 @media (min-width: 640px) {
@@ -67,6 +70,9 @@
     }
      .cards_item {
         padding:1rem;
+    }
+    .modal-content{
+        width:500px;
     }
 }
 
